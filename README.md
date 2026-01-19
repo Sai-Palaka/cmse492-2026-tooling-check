@@ -1,17 +1,39 @@
 # CMSE 492 Tooling Check
 
-This repository contains a simple Python script and Jupyter notebook used for the Day 01 in-class tooling check.
+This repository contains a simple Python script used to verify that a Python virtual environment (venv) is set up correctly for CMSE 492.
 
 ## Structure
 
-- `src/hello_cmse492.py`: prints a hello message, then reads a small CSV file and prints a basic summary
-- `notebooks/hello_cmse492.ipynb`: notebook version with separate cells for the hello message and CSV summary
-- `data/sample_data.csv`: tiny dataset used by both the script and the notebook
+- src/simple_analysis.py: creates a small pandas DataFrame, computes a summary statistic, and generates a simple matplotlib plot
+- README.md: setup and usage instructions
+- requirements.txt: list of required Python packages
 
-## Quick start
+## Setup and Usage (Windows PowerShell)
 
-```bash
-python src/hello_cmse492.py
-```
+All commands below should be run from the project root directory (the folder containing README.md) using PowerShell.
 
-Open the notebook in Jupyter or VS Code to run the notebook version. The first code cell prints a hello message, and the next cell reads the CSV file and prints a summary.
+Create the virtual environment:
+python -m venv .venv
+
+Activate the virtual environment:
+.\.venv\Scripts\Activate
+
+Install required packages:
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+
+Run the analysis script:
+python src/simple_analysis.py
+
+Deactivate the virtual environment when finished:
+deactivate
+
+## Analysis
+
+The analysis for this project is implemented in a Python script that demonstrates a basic data workflow. The script creates a small pandas DataFrame with sample data, computes a simple summary statistic (the mean of one column), and generates a basic visualization using matplotlib.
+
+The analysis script is located at:
+src/simple_analysis.py
+
+To run the analysis, make sure the virtual environment is activated and then run:
+python src/simple_analysis.py
