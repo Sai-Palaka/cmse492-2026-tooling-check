@@ -52,3 +52,19 @@ conda activate day03-conda-env
 conda deactivate
 ```
 
+## Environment setup options
+
+This project supports three environment management workflows. Recommended order for most users:
+
+- **uv (recommended):** Fast, project-aware installs with a built-in lockfile (`uv.lock`) for reproducibility.
+- **venv:** Traditional Python workflow using `pip` + manual activation.
+- **conda:** Helpful if you need non-Python dependencies or prefer the conda ecosystem.
+
+## Setup with uv (recommended)
+
+### Install uv (Windows PowerShell)
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+
