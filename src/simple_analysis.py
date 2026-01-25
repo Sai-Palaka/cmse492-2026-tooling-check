@@ -1,9 +1,11 @@
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+import polars as pl
 
-data = np.random.randn(100)
+# Create a simple Polars DataFrame
+df = pl.DataFrame({
+    "x": [1, 2, 3, 4, 5],
+    "y": [10, 20, 30, 40, 50]
+})
 
-sns.histplot(data, kde=True)
-plt.title("Sample Distribution with Seaborn")
-plt.show()
+# Use one Polars function
+print(df)
+print("Mean of y:", df["y"].mean())
