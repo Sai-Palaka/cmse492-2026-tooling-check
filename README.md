@@ -37,3 +37,18 @@ src/simple_analysis.py
 
 To run the analysis, make sure the virtual environment is activated and then run:
 python src/simple_analysis.py
+
+This project also supports a reproducible Conda environment using the provided `environment.yml` file.
+
+To create the Conda environment, run the following command from the project root directory:
+
+```bash
+conda env create -f environment.yml
+```
+Conda env activate and deactivate:
+
+```bash
+conda activate day03-conda-env
+conda deactivate
+```
+
